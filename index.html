@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Travel agency</title>
+<link rel="icon" type="image/png" href="assets/logo.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+body{
+  background:#f0f8ff;
+  color:#111;
+  line-height:1.6;
+  overflow-x:hidden;
+}
+a{
+  text-decoration:none;
+}
+
+header{
+  background: linear-gradient(90deg,gray,black, gray);
+  padding:20px 50px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  color:#fff;
+  position:sticky;
+  top:0;
+  z-index:100;
+  box-shadow:0 2px 10px rgba(0,0,0,0.2);
+}
+header h1{
+  font-size:28px;
+  font-weight:700;
+}
+
+nav a{
+  margin-left:25px;
+  color:#fff;
+  font-weight:500;
+  transition:0.3s;
+}
+nav a:hover{
+  color:#ffdd57;
+  transform:scale(1.1);
+}
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color:gray;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+.btn:hover {
+  background-color:#1e3c72 ;
+}
+.hero{
+  width:100%;
+  height:90vh;
+  background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url('https://images.unsplash.com/photo-1526772662000-3f88f10405ff') center/cover no-repeat;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  color:#fff;
+  animation: heroFade 4s ease-in-out;
+  cursor: pointer;
+}
+.hero h2{
+  font-size:60px;
+  margin-bottom:15px;
+  animation: slideDown 3.5s ease-out forwards;
+}
+.hero p{
+  font-size:24px;
+  animation: slideUp 1.5s ease-out forwards;
+}
+
+@keyframes heroFade{
+  from{opacity:0;}
+  to{opacity:1;}
+}
+@keyframes slideDown{
+  0%{opacity:0;transform:translateY(-50px);}
+  100%{opacity:1;transform:translateY(0);}
+}
+@keyframes slideUp{
+  0%{opacity:0;transform:translateY(50px);}
+  100%{opacity:1;transform:translateY(0);}
+}
+.section{
+  padding:70px 50px;
+  text-align:center;
+}
+.section h2{
+  font-size:36px;
+  margin-bottom:40px;
+  color:#1e3c72;
+  position:relative;
+}
+.section h2::after{
+  content:'';
+  width:60px;
+  height:4px;
+  background:#ffdd57;
+  display:block;
+  margin:15px auto 0;
+  border-radius:2px;
+}
+
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
+.card{
+  background:#fff;
+  border-radius:15px;
+  box-shadow:0 8px 25px rgba(0,0,0,0.15);
+  overflow:hidden;
+  transition:0.5s;
+  transform:translateY(0);
+}
+.card:hover{
+  transform:translateY(-10px) scale(1.05);
+}
+.card img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+  transition:0.5s;
+}
+.card:hover img{
+  transform:scale(1.1);
+}
+.card .content{
+  padding:25px;
+}
+.card h3{
+  font-size:22px;
+  margin-bottom:15px;
+  color:#1e3c72;
+}
+.card p{
+  font-size:15px;
+  color:#555;
+  margin-bottom:10px;
+}
+.card .price{
+  font-size:18px;
+  font-weight:700;
+  color:#ff5722;
+}
+
+.footer{
+  background: linear-gradient(90deg,gray,black, gray);
+  color:#fff;
+  padding:60px 50px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:25px;
+  animation: fadeInFooter 2s ease-in-out forwards;
+}
+@keyframes fadeInFooter{
+  from{opacity:0;}
+  to{opacity:1;}
+}
+.footer h3{margin-bottom:20px;color:#ffdd57;}
+.footer a{color:#fff;margin-bottom:12px;display:block;transition:0.3s;}
+.footer a:hover{color:#ff5722;}
+.footer p{font-size:14px;color:#ccc;}
+.footer .socials a{
+  display:inline-block;
+  width:45px;
+  height:45px;
+  line-height:45px;
+  text-align:center;
+  border-radius:50%;
+  background:#fff;
+  color:#1e3c72;
+  font-weight:bold;
+  margin-right:12px;
+  transition:0.3s transform,0.3s background,0.3s color;
+  text-decoration:none;
+}
+.footer .socials a:hover{
+  background:#ffdd57;
+  color:#1e3c72;
+  transform:translateY(-5px) scale(1.2);
+}
+.underline {
+            display: inline-block;
+            position: relative;
+            color: #FFFFFF;
+            font-weight: bold;
+            font-size: 32px;
+        }
+        .underline::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(to right,black,white , black); 
+            transition: width 0.4s ease;
+        }
+        .underline:hover::after {
+            width: 100%;
+        }
+@media(max-width:768px){
+  .hero h2{font-size:42px;}
+  .hero p{font-size:20px;}
+}
+</style>
+</head>
+<body>
+
+
+<header>
+ <div class="logo "><img src="../assets/logo.png" width="200px" height="130px" alt="Logo"></div>
+<nav>
+<!-- <a href="#">Home</a> -->
+<a href="pages/Packages.html">Packages</a>
+<a href="pages/Gallery.html">Gallery</a>
+<a href="pages/about.html">About</a>
+<a href="pages/Contact.html">Contact</a>
+<a href="pages/Booking.html" class="btn">Booking</a>
+
+</nav>
+</header>
+<section class="hero">
+<div>
+  <h2>WELCOME TO S.K-TECH TRAVEL AGENCY</h2>
+<p>Beautiful valleys, mountains & cultural heritage tours</p>
+</div>
+</section>
+
+<section class="section">
+<h2>Top Travel Packages</h2>
+<div class="grid">
+<div class="card">
+<img src="assets/KualaLumpur600-x-400-400x400.jpg" />
+<div class="content">
+<h3>Malaysia</h3>
+<p>5 Days Tour — Premium Hotels</p>
+<p class="price">Rs 45,000</p>
+</div>
+</div>
+<div class="card">
+<img src="assets/Dubai-600-x-400-400x400.jpg" />
+<div class="content">
+<h3>Dubai</h3>
+<p>3 Days Tour — Family Package</p>
+<p class="price">Rs 25,000</p>
+</div>
+</div>
+<div class="card">
+<img src="assets/balic-600-x-400-400x400.jpg" />
+<div class="content">
+<h3>Indonesia</h3>
+<p>6 Days Tour — Luxury Trip</p>
+<p class="price">Rs 60,000</p>
+</div>
+</div>
+</div>
+</section>
+<footer class="footer">
+<div>
+<h3 class="underline">About Us</h3>
+<p>S.K-TECH Travels is Pakistan's premier travel agency providing unforgettable experiences across the country.</p>
+</div>
+<div>
+<h3>Quick Links</h3>
+<a href="index.html">Home</a>
+<a href="Packages.html">Packages</a>
+<a href="Gallery.html">Gallery</a>
+<a href="Booking.html">Booking</a>
+<a href="Contact.html">Contact</a>
+</div>
+<div>
+<h3>Contact Info</h3>
+<p>Email: info@S.K-TECH.pk</p>
+<p>Phone: +92 3198588616</p>
+<p>Address:GREEN TOWN,SHAH FAISAL COLONY Karachi, Pakistan</p>
+</div>
+<div><div class="map-container" style="width:100%; max-width:800px; margin:auto;">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.1234567890123!2d67.12345678901234!3d24.123456789012345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33f1234567890%3A0x1234567890abcdef!2sGREEN%20TOWN%2C%20SHAH%20FAISAL%20COLONY%2C%20Karachi%2C%20Pakistan!5e0!3m2!1sen!2sus!4v1611234567890!5m2!1sen!2sus" 
+    width="100%" 
+    style="border:0;"
+    allowfullscreen="" 
+    loading="lazy">
+</iframe>
+</div>
+</div>
+<div>
+<h3>Follow Us</h3>
+<div class="socials">
+  <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook fa-2xl" style="color: #74C0FC;"></i></a>
+<a href="https://www.instagram.com/"><i class="fa-brands fa-instagram fa-2xl"style="color: #74C0FC;"></i></a>
+<a href="https://x.com/"><i class="fa-brands fa-square-twitter fa-2xl"style="color:#74C0FC ;"></i></a>
+<a href="https://pk.linkedin.com/"><i class="fa-brands fa-square-linkedin fa-2xl"style="color:#74C0FC;"></i></a>
+</div>
+</div>
+</footer>
+
+</body>
+</html>

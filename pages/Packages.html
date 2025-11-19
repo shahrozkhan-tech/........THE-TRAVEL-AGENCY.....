@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Packages </title>
+<link rel="icon" type="image/png" href="../assets/logo.png">
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+body{
+    background:#f5f5f5;
+    color:#111;
+   cursor: default;
+}
+header{
+    background: linear-gradient(90deg,gray,black, gray);
+    padding:20px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    color:#fff;
+}
+header h1{
+    font-size:28px;
+}
+nav a{
+    margin-left:20px;
+    color:#fff;
+    text-decoration:none;
+    font-weight:500;
+}
+.section{
+    padding:60px 40px;
+    text-align:center;
+}
+.underline {
+            display: inline-block;
+            position: relative;
+            color: #FFFFFF;
+            font-weight: bold;
+            font-size: 32px;
+        }
+        .underline::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(to right,black,gray , black); 
+            transition: width 0.4s ease;
+        }
+        .underline:hover::after {
+            width: 100%;
+        }
+.section h2{
+    font-size:32px;
+    margin-bottom:30px;
+    color:#333;
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
+.grid img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:10px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+.card{
+  background:#fff;
+  border-radius:15px;
+  box-shadow:0 8px 25px rgba(0,0,0,0.15);
+  overflow:hidden;
+  transition:0.5s;
+  transform:translateY(0);
+}
+.card:hover{
+  transform:translateY(-10px) scale(1.05);
+}
+.card img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+  transition:0.5s;
+}
+.card:hover img{
+  transform:scale(1.1);
+}
+.card .content{
+    padding:20px;
+}
+.card h3{
+    font-size:22px;
+    margin-bottom:10px;
+}
+.card p{
+    font-size:14px;
+    color:#555;
+    margin-bottom:10px;
+}
+.card .price{
+    font-size:18px;
+    font-weight:600;
+    color:#0d47a1;
+}
+footer{
+    margin-top:40px;
+     background: linear-gradient(90deg,gray,black, gray);
+    color:#fff;
+    padding:30px;
+    text-align:center;
+    }
+    
+</style>
+</head>
+<body>
+<header>
+    <img src="../assets/logo.png"  width="200px" height="130px" alt="">
+<nav>
+<a href="../index.html">Home</a>
+<a href="Gallery.html">Gallery</a>
+<a href="about.html">About</a>
+<a href="Contact.html">Contact</a>
+<a href="Booking.html">Booking</a>
+</nav>
+</header>
+
+<section class="section">
+<h2 class="underline">Our Travel Packages</h2>
+<div class="grid">
+
+<div class="card">
+<img src="../assets/baku-600-x-400-400x400.jpg" />
+<div class="content">
+    <h3>Azerbaijan</h3>
+    <p>Premium hotels & guided tour.</p>
+    <p class="price">Rs 45,000</p>
+</div>
+</div>
+
+<div class="card">
+<img src="../assets/balic-600-x-400-400x400.jpg" />
+<div class="content">
+    <h3>Indonesia</h3>
+    <p>Family-friendly adventure.</p>
+    <p class="price">Rs 25,000</p>
+</div>
+</div>
+
+<div class="card">
+<img src="../assets/USA-400x400.png" />
+<div class="content">
+    <h3>USA</h3>
+    <p>Luxury trip with sightseeing.</p>
+    <p class="price">Rs 60,000</p>
+</div>
+</div>
+
+<div class="card">
+<img src="../assets/camaksjdfh-400x400.jpg" />
+<div class="content">
+    <h3>Combodia</h3>
+    <p>Jeep ride adventure.</p>
+    <p class="price">Rs 38,000</p>
+</div>
+</div>
+
+<div class="card">
+<img src="../assets/Dubai-600-x-400-400x400.jpg" />
+<div class="content">
+    <h3>Dubai</h3>
+    <p>Trek and scenic views.</p>
+    <p class="price">Rs 32,000</p></div>
+</div>
+
+<div class="card">
+<img src="../assets/europe-mt-itlis-400x400.jpg" />
+<div class="content">
+    <h3>Europe(Germany,italy & spain)</h3>
+    <p>Cultural sightseeing tour.</p>
+    <p class="price">Rs 8,000</p>
+</div>
+</div>
+<div class="card">
+<img src="../assets/japananaasd-400x400.png" />
+<div class="content">
+    <h3>Japan</h3>
+    <p>Premium hotels & guided tour.</p>
+    <p class="price">Rs 45,000</p>
+</div>
+</div>
+
+<div class="card">
+<img src="../assets/korea-r600-x-400-400x400.jpg" />
+<div class="content">
+    <h3>South Korea</h3>
+    <p>Family-friendly adventure.</p>
+    <p class="price">Rs 25,000</p>
+</div>
+</div>
+
+<div class="card">
+<img src="../assets/KualaLumpur600-x-400-400x400.jpg" />
+<div class="content">
+    <h3>Malaysia</h3>
+    <p>Luxury trip with sightseeing.</p>
+    <p class="price">Rs 60,000</p>
+</div>
+</div>
+
+<div class="card">
+<img src="../assets/maldives-600-x-400-400x400.jpg" />
+<div class="content">
+    <h3>Maldives</h3>
+    <p>Jeep ride adventure.</p>
+    <p class="price">Rs 38,000</p>
+</div>
+</div>
+
+<div class="card">
+<img src="../assets/nepal-600-x-400-400x400.jpg" />
+<div class="content">
+    <h3>Nepal</h3>
+    <p>Trek and scenic views.</p>
+    <p class="price">Rs 32,000</p>
+</div>
+</div>
+
+<div class="card">
+<img src="../assets/newzealand-600-x-400-400x400.jpg" />
+<div class="content">
+    <h3>New Zezland</h3>
+    <p>Cultural sightseeing tour.</p>
+    <p class="price">Rs 8,000</p>
+</div>
+</div>
+<div class="card">
+<img src="../assets/output-onlinepngtools-4-400x400.png" />
+<div class="content">
+    <h3>South Africa</h3>
+    <p>Cultural sightseeing tour.</p>
+    <p class="price">Rs 8,000</p>
+</div>
+</div>
+<div class="card">
+<img src="../assets/rturkey-1-400x400.png" />
+<div class="content">
+    <h3>Turkey</h3>
+    <p>Premium hotels & guided tour.</p>
+    <p class="price">Rs 45,000</p>
+</div>
+</div>
+
+<div class="card">
+<img src="../assets/singapore-600-x-400-400x400.jpg" />
+<div class="content">
+    <h3>Singapore</h3>
+    <p>Family-friendly adventure.</p>
+    <p class="price">Rs 25,000</p>
+</div>
+</div>
+
+<div class="card">
+<img src="../assets/Srilanka-600-x-400-400x400.jpg" />
+<div class="content">
+    <h3>Sri Lanka</h3>
+    <p>Luxury trip with sightseeing.</p>
+    <p class="price">Rs 60,000</p>
+</div>
+</div>
+
+<div class="card">
+<img src="../assets/thailand-600-x-400-400x400.jpg" />
+<div class="content">
+    <h3>Thailand</h3>
+    <p>Jeep ride adventure.</p>
+    <p class="price">Rs 38,000</p>
+</div>
+</div>
+
+<div class="card">
+<img src="../assets/canada-6-400x400.png" />
+<div class="content">
+    <h3>Canada</h3>
+    <p>Trek and scenic views.</p>
+    <p class="price">Rs 32,000</p>
+</div>
+</div>
+
+<div class="card">
+<img src="../assets/Uzbekistan-600-x-400-400x400 (1).jpg" />
+<div class="content">
+    <h3>Uzbekistan</h3>
+    <p>Luxury trip with sightseeing</p>
+    <p class="price">Rs 8,000</p>
+</div>
+</div>
+
+<div class="card">
+<img src="../assets/rsz_adrian-radion-zidybfjuxzy-unsplash.jpg" />
+<div class="content">
+    <h3>Oman</h3>
+    <p>Luxury trip with sightseeing</p>
+    <p class="price">Rs 32,000</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<footer>
+<div>
+<h3>About Us</h3>
+<p>S.K-TECH Travels is Pakistan's premier travel agency providing unforgettable experiences across the country.</p>
+</div>
+</footer>
+
+</body>
+</html>
